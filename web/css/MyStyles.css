@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31-ene-2017, 22:59:32
+    Author     : User
+*/
+//-------mis estilos---------
+
+.linea0{
+    background-color: #FFFFFF;
+}
+.linea1{
+    //background-color:#00ffa0;
+    background-color:#86F5C7;
+    /*background-color:#FFFF00;*/ 
+}
+.t1{
+    border-collapse: collapse;
+    width: 150px;
+    text-align: center;
+}
+.fila0{
+    background-color: #B5EFF2;
+}
+.fila1{
+    background-color: #FFFFFF;
+}
+.t2{
+    border-collapse: separate;
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    border: 3;
+    position:absolute;
+    bottom:300px;
+    right:80px;
+}
+
+.titulos{
+	font-size: 15px;
+	font-family: 'Noto Sans', sans-serif;
+	color: #3F785A; //color gris
+	position: relative;
+	line-height: 20px;
+	z-index: 999;
+	position: relative;
+}
+
+.img{
+    position:absolute;
+    bottom:562px;
+    right:600px;
+    width:100px;
+    heigth:100px;
+}
+////////////////////
+.tablaa2{
+    border-collapse: separate;
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    border: 3;
+    position:absolute;
+    bottom:300px;
+    right:80px;
+}
+
+
+
+.img2{
+    position:absolute;
+    bottom:562px;
+    right:600px;
+    width:100px;
+    heigth:100px;
+}
+
+table#tabla2 td:nth-child(1){
+    width: 200px;
+}
