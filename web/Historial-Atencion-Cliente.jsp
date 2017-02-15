@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>El Perro de Pavlov | Cronograma de Vacunas Futuras</title>
+<title>El Perro de Pavlov | Historial de Atenci贸n</title>
 <meta charset="utf-8">
 <link rel="icon" href="images/favicon.ico">
 <link rel="shortcut icon" href="images/favicon.ico">
@@ -38,19 +38,18 @@ jQuery(document).ready(function () {
             <li class="current"><a href="menu admi.html">Inicio</a></li>
             <li class="with_ul"><a href="#">Procesos</a>
                 <ul>
-                    <li class="current"><a href="Ingresar-Mascota-Cliente.html">Registrar Mascota</a></li>
-                    <li class="current"><a href="Registrar-Publicacion-Cliente.html">Registrar Publicaci贸n</a></li>
+                    <li class="current"><a href="Registrar-Publicacion-Cliente.jsp">Registrar Publicaci髇</a></li>
                 </ul>
             </li>
             <li class="with_ul"><a href="#">Historiales</a>
                 <ul>
-                    <li class="current"><a href="Historial-Peso-Cliente.html">Historial de Peso</a></li>
-                    <li class="current"><a href="Historial-Vacuna-Cliente.html">Historial de Vacunaci贸n</a></li>
-                    <li class="current"><a href="Historial-Atencion-Cliente.html">Historial de Atenci贸n</a></li>
+                    <li class="current"><a href="Historial-Peso-Cliente.jsp">Historial de Peso</a></li>
+                    <li class="current"><a href="Historial-Vacuna-Cliente.jsp">Historial de Vacunaci髇</a></li>
+                    <li class="current"><a href="Historial-Atencion-Cliente.jsp">Historial de Atenci髇</a></li>
                 </ul>
             </li>
-            <li><a href="Cronograma-Vacunas-Futuras-Cliente.html">Vacunas Futuras</a></li>
-            <li><a href="index.html">Cerrar Sesi贸n</a></li>
+            <li><a href="Cronograma-Vacunas-Futuras-Cliente.jsp">Vacunas Futuras</a></li>
+            <li><a href="index.html">Cerrar Sesi髇</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
@@ -63,7 +62,7 @@ jQuery(document).ready(function () {
   <div class="container_12">
     <div class="grid_6">
       
-      <h2 class="ic1">Cronograma de Vacunas Futuras</h2>
+      <h2 class="ic1">Historial de Atenciones</h2>
       <form id="form" action="#">
         <div class="success_wrapper">
           <div class="success">Contact form submitted!<br>
@@ -84,28 +83,34 @@ jQuery(document).ready(function () {
       </form>
       
       <table class="table-bordered table-condensed table-hover table-responsive table-striped">
-		<h2>Cronograma de Vacunas Futuras</h2>
+		<h2>Historial de Pesos</h2>
 			<tr>
-				<td> IdVacuna</td>
-				<td> Vacuna</td>
-				<td> Fecha</td>
+				<td>Fecha</td>
+				<td>Servicio</td>
+			</tr>
+                        <tr>
+				<td> 12/05/2016</td>
+                                <td>Grooming</td>
 			</tr>
 			<tr>
-                                <td> V000003</td>
-				<td> Vacuna Rabia</td>
-				<td> 12/01/2017</td>
+				<td> 12/06/2016</td>
+                                <td>Masaje</td>
 			</tr>
 			<tr>
-                                
-				<td> V000001</td>
-				<td> Vacuna Polivalente</td>
-				<td> 12/01/2017</td>
+				<td> 12/07/2016</td>
+                                <td>Vacunaci贸n</td>
+			</tr>
+                        <tr>
+				<td> 12/08/2016</td>
+                                <td>Desparacitaci贸n</td>
 			</tr>
 			<tr>
-				
-				<td> V000002</td>
-				<td> Vacuna Refuerzo Polivalente</td>
-				<td> 12/01/2017</td>
+				<td> 12/09/2016</td>
+                                <td>Vacunaci贸n</td>
+			</tr>
+			<tr>
+				<td> 12/10/2016</td>
+                                <td>Grooming</td>
 			</tr>
 		</TABLE>
     </div>
@@ -122,3 +127,4 @@ jQuery(document).ready(function () {
 </footer>
 </body>
 </html>
+
