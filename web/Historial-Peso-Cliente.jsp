@@ -21,7 +21,78 @@ jQuery(document).ready(function () {
         easingType: 'easeOutQuart'
     });
 });
-</script>
+/* Abrimos etiqueta de código */
+    function validar_formulario(){ /* Abrimos la función validar_formulario */
+    /* Partimos por validar que se haya ingresado un valor para el nombre, esto lo hacemos mediante un if y preguntamos si el campo es igual a 0, si es así, desplegamos un mensaje para que se ingrese el nombre y volvemos al formulario. */
+    if (document.form.mascota.value.length==0){
+    alert("Debe ingresar el nombre de la mascota")
+    document.form.mascota.focus()
+    return 0;
+    }
+    
+    if (document.form.dueno.value.length==0){
+    alert("Debe ingresar un pseudonimo")
+    document.form.dueno.focus()
+    return 0;
+    }
+
+    if (document.form.email.value.length==0){
+    alert("Debe ingresar un email")
+    document.form.email.focus()
+    return 0;
+    }
+    
+    if (document.form.comentario.value.length==0){
+    alert("Ingrese un comentario")
+    document.form.comentario.focus()
+    return 0;
+    }
+    /* Luego validamos la edad, viendo si se ingresa una mayor a 18 años. Asignamos primero a una variable el valor ingresado y luego comprobando que no este vacío y que cumpla el requerimiento. También llamaremos a una función validarEntero que definiremos en el siguiente paso, dándole como parámetro la edad ingresada. Esta función realizará las validaciones necesarias para definir si es un dato numérico. */
+    edad = document.form1.edad.value
+    edad = validarEntero(edad)
+    document.form1.edad.value=edad
+    if (edad==""){
+    alert("Debe ingresar su edad.")
+    document.form1.edad.focus()
+    return 0;
+    }else{
+    if (edad<18){
+    alert("Debe ser mayor de 18")
+    document.form1.edad.focus()
+    return 0;
+    }
+    }
+
+    /* Finalmente, validamos el motivo del contacto */
+    if (document.form1.motivo.selectedIndex==0){
+    alert("Debe seleccionar un motivo de su contacto.")
+    document.form1.interes.focus()
+    return 0;
+    }
+    
+    
+
+    /* Si paso todas las validaciones, desplegamos un mensaje de éxito y enviamos el formulario */
+    alert("Los datos fueron ingresados correctamente y seran enviados");
+    document.form1.submit();
+    }
+    
+    
+
+    function validarEntero(valor){
+    /* Mediante parseInt intentaremos transformar el valor a número entero. Si el dato fue ingresado bien y ya lo era, no hará nada */
+    valor = parseInt(valor)
+
+    /* Se comprobará si el valor es un número */
+    if (isNaN(valor)) {
+    /* Si no lo es, se devuelve una cadena vacía */
+    return ""
+    }else{
+    /* De lo contrario se devuelve el número */
+    return valor
+    }
+    }
+    </script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <link rel="stylesheet" media="screen" href="css/ie.css">
@@ -63,7 +134,7 @@ jQuery(document).ready(function () {
     <div class="grid_6">
       
       <h2 class="ic1">Historial de Pesos</h2>
-      <form id="form" action="#">
+      <form id="form" name ="form" action="#">
         <div class="success_wrapper">
           <div class="success">Contact form submitted!<br>
             <strong>We will be in touch soon.</strong> </div>
@@ -71,19 +142,24 @@ jQuery(document).ready(function () {
         <fieldset>
           
           <label class="name">
-            <input type="text" value="Mascota:">
+            <input type="text" placeholder="Mascota:" name ="mascota">
             <br class="clear">
-            <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> 
+             
           </label>
           <div class="clear"></div>
-          <div class="btns"><a data-type="submit" class="btn">Enviar</a><a data-type="reset" class="btn">Limpiar</a>
+          <div class="btns">
+              <a data-type="submit" class="btn" onclick="validar_formulario()">Enviar</a>
+              <a data-type="reset" class="btn">Limpiar</a>
             <div class="clear"></div>
           </div>
         </fieldset>
       </form>
       
       <table class="table-bordered table-condensed table-hover table-responsive table-striped">
-		<h2>Historial de Pesos</h2>
+		<h2>Historial de Pesos</h2
+                
+                
+
 			<tr>
 				<td>Fecha</td>
 				<td>Peso (kg)</td>

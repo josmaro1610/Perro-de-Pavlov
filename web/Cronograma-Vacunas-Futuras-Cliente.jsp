@@ -63,7 +63,7 @@ jQuery(document).ready(function () {
     <div class="grid_6">
       
       <h2 class="ic1">Cronograma de Vacunas Futuras</h2>
-      <form id="form" action="#">
+      <form id="form" action="#" name="form">
         <div class="success_wrapper">
           <div class="success">Contact form submitted!<br>
             <strong>We will be in touch soon.</strong> </div>
@@ -71,12 +71,12 @@ jQuery(document).ready(function () {
         <fieldset>
           
           <label class="name">
-            <input type="text" value="Mascota:">
+            <input type="text" name="mascota" placeholder="Mascota:">
             <br class="clear">
-            <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> 
+             
           </label>
           <div class="clear"></div>
-          <div class="btns"><a data-type="submit" class="btn">Enviar</a><a data-type="reset" class="btn">Limpiar</a>
+          <div class="btns"><a data-type="submit" class="btn" onclick="validar_formulario">Enviar</a><a data-type="reset" class="btn">Limpiar</a>
             <div class="clear"></div>
           </div>
         </fieldset>
