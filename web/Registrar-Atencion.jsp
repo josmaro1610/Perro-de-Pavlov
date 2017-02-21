@@ -28,6 +28,78 @@ jQuery(document).ready(function () {
         easingType: 'easeOutQuart'
     });
 });
+
+/* Abrimos etiqueta de código */
+    function validar_formulario(){ /* Abrimos la función validar_formulario */
+    /* Partimos por validar que se haya ingresado un valor para el nombre, esto lo hacemos mediante un if y preguntamos si el campo es igual a 0, si es así, desplegamos un mensaje para que se ingrese el nombre y volvemos al formulario. */
+    if (document.form.mascota.value.length==0){
+    alert("Debe ingresar el nombre de la mascota")
+    document.form.mascota.focus()
+    return 0;
+    }
+    
+    if (document.form.servicio.value.length==0){
+    alert("Debe ingresar nombre de servicio")
+    document.form.servicio.focus()
+    return 0;
+    }
+
+    if (document.form.id.value.length==0){
+    alert("Debe ingresar un Id para el servicio")
+    document.form.id.focus()
+    return 0;
+    }
+    
+    if (document.form.descripcion.value.length==0){
+    alert("Ingrese desccripcion dde la mascota")
+    document.form.descripcion.focus()
+    return 0;
+    }
+    /* Luego validamos la edad, viendo si se ingresa una mayor a 18 años. Asignamos primero a una variable el valor ingresado y luego comprobando que no este vacío y que cumpla el requerimiento. También llamaremos a una función validarEntero que definiremos en el siguiente paso, dándole como parámetro la edad ingresada. Esta función realizará las validaciones necesarias para definir si es un dato numérico. */
+    edad = document.form.peso.value
+    edad = validarEntero(edad)
+    document.form1.edad.value=edad
+    if (edad==""){
+    alert("Debe ingresar un peso valido.")
+    document.form1.edad.focus()
+    return 0;
+    }else{
+    if (edad<2){
+    alert("Debe ser mayor de 2kg")
+    document.form1.edad.focus()
+    return 0;
+    }
+    }
+
+    /* Finalmente, validamos el motivo del contacto */
+    if (document.form1.motivo.selectedIndex==0){
+    alert("Debe seleccionar un motivo de su contacto.")
+    document.form1.interes.focus()
+    return 0;
+    }
+    
+    
+
+    /* Si paso todas las validaciones, desplegamos un mensaje de éxito y enviamos el formulario */
+    alert("Los datos fueron ingresados correctamente y seran enviados");
+    document.form1.submit();
+    }
+    
+    
+
+    function validarEntero(valor){
+    /* Mediante parseInt intentaremos transformar el valor a número entero. Si el dato fue ingresado bien y ya lo era, no hará nada */
+    valor = parseInt(valor)
+
+    /* Se comprobará si el valor es un número */
+    if (isNaN(valor)) {
+    /* Si no lo es, se devuelve una cadena vacía */
+    return ""
+    }else{
+    /* De lo contrario se devuelve el número */
+    return valor
+    }
+    }
 </script>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
@@ -82,42 +154,36 @@ jQuery(document).ready(function () {
         
         <fieldset>
           <label>
-            <input type="text" value="IdAtencion:">
+            <input type="text" name="id" placeholder="IdAtencion:">
             <br class="clear">
-            <span class="empty error-empty">*This field is required.</span> 
           </label>
           <label>
-            <input type="text" value="Mascota:">
+            <input type="text" name="mascota" placeholder="Mascota:">
             <br class="clear">
-            <span class="empty error-empty">*This field is required.</span> 
           </label>
           <label>
-            <input type="text" value="Servicio:">
+            <input type="text" name="servicio" plaeholder="Servicio:">
             <br class="clear"><br class="clear"><br class="clear"><br class="clear">
-            <span class="empty error-empty">*This field is required.</span> 
           </label> 
             <br>
             
            <label>
-            <input type="text" value="PesoActual:">
+            <input type="text" name="peso" placeholder="PesoActual:">
             <br class="clear">
-            <span class="empty error-empty">*This field is required.</span> 
           </label>
            <label>
-            <input type="text" value="Caracteristicas:">
+            <input type="text" name ="descripcion" placeholder="Caracteristicas:">
             <br class="clear">
-            <span class="empty error-empty">*This field is required.</span> 
           </label> 
            
           <label class="message2">
               <textarea> Descripción:</textarea>
             <br class="clear">
             <span class="error">*The message is too short.</span> 
-            <span class="empty">*This field is required.</span> 
           </label>
             
           <div class="clear"></div>
-          <div class="btns"><a data-type="reset" class="btn">Registrar!</a>
+          <div class="btns"><a data-type="reset" class="btn" onclick="validar_formulario()">Registrar!</a>
             <div class="clear"></div>
           </div>
           
@@ -125,50 +191,6 @@ jQuery(document).ready(function () {
       </form>
     </div>
       
-      
-    <!--<div class="grid_6">
-        
-      <h2>¿Aun no eres usuario?</h2>
-      <br>
-      <img src="images/page1_img5.jpg" alt="" class="img_inner fleft">
-      <div class="extra_wrapper style1">
-        <p class="text1"><a href="Servicios.html">Click aqui</a> Para mas informacion acerca de los servicios ofrecidos por la veterinaria el Perro de Pavlov </p>
-      </div>
-      <div class="clear"></div>
-      La veterinaria el Perro de Pavlov le ofrece un control de sus mascotas ingresando su usuario y contraseña, donde les proporcionamos la siguiente informacion:<br>
-      <ul class="list l1">
-        <li> <span>
-          <time datetime="2045-01-01">1</time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1">Control de vacunas con fechas de sus proximas vacunas.</div>
-          </div>
-        </li>
-        <li> <span class="cnt">
-          <time datetime="2045-01-01">2</time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1">Historial de las atenciones.</div>
-          </div>
-        </li>
-        <li> <span>
-          <time datetime="2045-01-01">3</time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1">Nuevos tratamientos para su mascota.</div>
-          </div>
-        </li>
-        <li> <span class="cnt">
-          <time datetime="2045-01-01">4</time>
-          </span>
-          <div class="extra_wrapper">
-            <div class="col1">Recordatorios para llevar a su mascota a su control.</div>
-          </div>
-        </li>
-      </ul>
-     
-        
-    </div>-->
     
     <div class="grid_6">
         

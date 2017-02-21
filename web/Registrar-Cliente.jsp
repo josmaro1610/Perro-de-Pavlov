@@ -1,13 +1,28 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+    <%@page import="com.mongodb.Block"%>
+    <%@page import="com.mongodb.MongoClient"%>
+    <%@page import="com.mongodb.client.FindIterable"%>
+    <%@page import="com.mongodb.client.MongoDatabase"%>
+    <%@page import="com.mongodb.DBCollection"%>
+    <%@page import="com.mongodb.DBObject"%>
+    <%@page import="com.mongodb.Mongo"%>
+    <%@page import="com.mongodb.DB"%>
+    <%@page import="com.mongodb.client.MongoCursor"%>
+    <%@page import="com.mongodb.client.MongoCollection"%>
+    <%@page import="com.mongodb.BasicDBObjectBuilder"%>
+    <%@page import="com.mongodb.BasicDBObject"%>
+    <%@page import="javax.swing.text.Document"%>
+    <%@page import="java.io.*"%>
+    <%@page import="java.util.*"%>
 <html lang="en">
 <head>
-<title>El Perro de Pavlov | Historial de Vacunas</title>
+<title>Pet Club | Registrar Cliente</title>
 <meta charset="utf-8">
 <link rel="icon" href="images/favicon.ico">
 <link rel="shortcut icon" href="images/favicon.ico">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/form.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/jquery.js"></script>
 <script src="js/forms.js"></script>
 <script src="js/jquery-migrate-1.1.1.js"></script>

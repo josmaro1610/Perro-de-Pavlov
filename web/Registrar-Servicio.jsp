@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="css/form.css">
 <link rel="stylesheet" href="css/MyStyles.css">
 <script src="js/jquery.js"></script>
-<script src="js/forms.js"></script>
+<!--<script src="js/forms.js"></script>-->
 <script src="js/jquery-migrate-1.1.1.js"></script>
 <script src="js/superfish.js"></script>
 <script src="js/jquery.equalheights.js"></script>

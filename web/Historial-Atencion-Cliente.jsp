@@ -21,6 +21,8 @@ jQuery(document).ready(function () {
         easingType: 'easeOutQuart'
     });
 });
+
+
 /* Abrimos etiqueta de código */
     function validar_formulario(){ /* Abrimos la función validar_formulario */
     /* Partimos por validar que se haya ingresado un valor para el nombre, esto lo hacemos mediante un if y preguntamos si el campo es igual a 0, si es así, desplegamos un mensaje para que se ingrese el nombre y volvemos al formulario. */
